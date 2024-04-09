@@ -6,8 +6,4 @@ ll_env\Scripts\activate
 python manage.py runserver
 
 python manage.py makemigrations learning_logs
-<<<<<<< HEAD
 python manage.py migrate
-=======
-python manage.py migrate
->>>>>>> c18a77016036b4f2edbd4279e0eba83248b246ef
