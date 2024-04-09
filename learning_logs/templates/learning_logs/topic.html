@@ -2,9 +2,12 @@
 
 {% block content %}
 
-  <p>Тема: {{ topic.text }}</p>
+  <p>Ваши записи по теме "{{ topic.text }}":</p>
 
-  <p>Записи:</p>
+  <p>
+    <a href="{% url 'learning_logs:new_entry' topic.id %}">Добавить новую запись</a>
+  </p>
+
   <ul>
     {% for entry in entries %}
       <li>
