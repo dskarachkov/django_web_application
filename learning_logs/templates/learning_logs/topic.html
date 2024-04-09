@@ -2,9 +2,9 @@
 
 {% block content %}
 
-  <p>Topic: {{ topic.text }}</p>
+  <p>Тема: {{ topic.text }}</p>
 
-  <p>Entries:</p>
+  <p>Записи:</p>
   <ul>
     {% for entry in entries %}
       <li>
@@ -12,7 +12,7 @@
         <p>{{ entry.text|linebreaks }}</p>
       </li>
     {% empty %}
-      <li>There are no entries for this topic yet.</li>
+      <li>По этой теме пока нет записей.</li>
     {% endfor %}
   </ul>
   

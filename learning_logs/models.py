@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+tz = timezone.get_default_timezone()
+
 
 class Topic(models.Model):
     # Тема, которую изучает пользователь
