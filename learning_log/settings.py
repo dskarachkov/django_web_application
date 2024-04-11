@@ -35,7 +35,10 @@ INSTALLED_APPS = [
     'learning_logs',
     'users',
 
-    # дефолтные приложения
+    # Сторонние приложения
+    'bootstrap4',
+
+    # default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -108,8 +111,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-#LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'Europe/Moscow'
 
@@ -129,3 +132,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #LOGOUT_REDIRECT_URL = 'http://127.0.0.1:8000/admin/logout/'
+LOGIN_URL = '/users/login/'
