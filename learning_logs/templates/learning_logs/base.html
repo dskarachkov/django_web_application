@@ -27,40 +27,40 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'learning_logs:topics' %}">
               Темы</a></li>
-        </ul> <!-- Конец ссылок в левой части навигационной панели -->
+        </ul> <!-- End of links on left side of navbar -->
 
-        <!-- Ссылки, связанные с аккаунтом -->
+        <!-- Account-related links -->
         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
 
           {% if user.is_authenticated %}
             <li class="nav-item">
-              <span class="navbar-text me-2">{{ user.username }}
+              <span class="navbar-text me-2">{{ user.username }}.
                 </span></li>
           {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'users:register' %}">
+              <a class="nav-link" href="{% url 'accounts:register' %}">
                   Регистрация</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'users:login' %}">
+              <a class="nav-link" href="{% url 'accounts:login' %}">
                   Войти</a></li>
           {% endif %}
 
-        </ul> <!-- Конец ссылок, связанных с аккаунтом -->
+        </ul> <!-- End of account-related links -->
 
         {% if user.is_authenticated %}
-          <form action="{% url 'users:logout' %}" method='post'>
+          <form action="{% url 'accounts:logout' %}" method='post'>
             {% csrf_token %}
             <button name='submit' class='btn btn-outline-secondary btn-sm'>
               Выйти</button>
           </form>
         {% endif %}
 
-      </div> <!-- Закрытие сворачивающейся части навигационной панели-->
+      </div> <!-- Closes collapsible parts of navbar -->
 
-    </div> <!-- Закрытие контейнера навигационной панели -->
-  </nav> <!-- Конец навигационной панели -->
+    </div> <!-- Closes navbar's container -->
+  </nav> <!-- End of navbar -->
 
-    <main class="container">
+  <main class="container">
     <div class="pb-2 mb-2 border-bottom">
       {% block page_header %}{% endblock page_header %}
     </div>

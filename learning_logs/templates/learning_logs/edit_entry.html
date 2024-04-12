@@ -1,7 +1,9 @@
 {% extends "learning_logs/base.html" %}
 
 {% block content %}
+
   <p><a href="{% url 'learning_logs:topic' topic.id %}">Вернуться к списку запистей по теме "{{ topic }}"</a></p>
+
   <p>Редактировать запись:</p>
 
   <form action="{% url 'learning_logs:edit_entry' entry.id %}" method='post'>
